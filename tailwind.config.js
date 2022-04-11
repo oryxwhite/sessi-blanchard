@@ -5,6 +5,7 @@ module.exports = {
   ],
   theme: {
     screens: {
+      xs: '380px',
       sm: '480px',
       md: '768px',
       lg: '976px',
@@ -13,5 +14,16 @@ module.exports = {
     extend: {
     },
   },
-  plugins: [],
+  plugins: []
+  
+  // purge: [
+  //   "./pages/**/*.tsx",
+  //   "./pages/**/*.js",
+  //   "./pages/**/*.ts",
+  //   "./components/**/*.tsx",
+  //   "./components/**/*.js",
+  //   "./components/**/*.ts",
+  // ],
+   
 }
+
