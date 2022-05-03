@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Head from "next/dist/shared/lib/head";
 import Link from "next/dist/client/link";
-import { server } from './config'
+import { server } from '../../lib/config'
 
 import { getAllPostsWithSlug, getPost } from "../../lib/api";
 export default function Post({ postData }) {

@@ -1,7 +1,7 @@
 import { getAllPosts } from '../../lib/api';
 import Link from 'next/link';
 import Head from 'next/head';
-import { server } from './config' 
+import { server } from '../../lib/config' 
 
 export default function Blog({ allPosts: { edges } }) {
   
