@@ -1,7 +1,7 @@
 import { getAllPosts } from '../../lib/api';
 import Link from 'next/link';
 import Head from 'next/head';
-
+import { server } from './config' 
 
 export default function Blog({ allPosts: { edges } }) {
   
@@ -30,7 +30,7 @@ export default function Blog({ allPosts: { edges } }) {
               <h2 className=' font-serif text-2xl font-bold mb-4'>{node.title}</h2>
               {/* slice removes the p tags that wordpress includes by default */}
               <h3 className='mb-7'>{node.excerpt.slice(3, -5)}</h3>
-              <Link  href={`/blogs/${node.slug}`}>
+              <Link  href={`${server}/blogs/${node.slug}`}>
                 <a className='text-red-800 font-bold'>Read more </a>
               </Link>
             </div>
