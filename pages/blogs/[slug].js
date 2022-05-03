@@ -50,7 +50,7 @@ export async function getStaticPaths() {
     const allPosts = await getAllPostsWithSlug()
 
     return {
-        paths: allPosts.edges.map(({ node }) => `${server}/blogs/${node.slug}`) || [],
+        paths: allPosts.edges.map(({ node }) => `/blogs/${node.slug}`) || [],
         fallback: true
     }
 }
