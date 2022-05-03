@@ -5,11 +5,7 @@ export default function Hero() {
   return (
     <div className="flex flex-col items-center w-full sm:w-10/12 justify-center mt-5 md:mt-10">
       
-
         <motion.img initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: .8, duration: .3 }} className=" rounded-xl w-10/12 max-w-[700px]" layout='responsive' src='/sessi.jpg' alt='Sessi Blanchard portrait'></motion.img>
-
-        
-        
         <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 1.1, duration: .3 }} href='#' className="flex flex-col items-center justif-center text-white font-[arial] tracking-[.3em] text-center mt-12 text-sm sm:text-lg w-8/12 "><strong className='tracking-wide'></strong> 
         
             DRUG-USER ACTIVIST
