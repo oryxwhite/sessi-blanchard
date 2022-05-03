@@ -9,6 +9,7 @@
     "@apollo/client": "^3.6.2",
     "@stripe/stripe-js": "^1.28.0",
     "axios": "^0.26.1",
+    "flowbite": "^1.4.4",
     "framer-motion": "^6.2.9",
     "graphql": "^16.4.0",
     "micro": "^9.3.4",

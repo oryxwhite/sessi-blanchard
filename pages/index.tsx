@@ -4,6 +4,7 @@ import Navbar from './components/navbar'
 import Hero from './components/hero'
 
 const Home: NextPage = () => {
+  console.log(process.env.NODE_ENV)
   return (
     <div className="flex min-h-screen flex-col items-center justify-top py-2 mt-4">
       

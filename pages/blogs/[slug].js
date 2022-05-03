@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Head from "next/dist/shared/lib/head";
 import Link from "next/dist/client/link";
+import { server } from './config'
 
 import { getAllPostsWithSlug, getPost } from "../../lib/api";
 export default function Post({ postData }) {
@@ -49,7 +50,7 @@ export async function getStaticPaths() {
     const allPosts = await getAllPostsWithSlug()
 
     return {
-        paths: allPosts.edges.map(({ node }) => `/blogs/${node.slug}`) || [],
+        paths: allPosts.edges.map(({ node }) => `${server}/blogs/${node.slug}`) || [],
         fallback: true
     }
 }
