@@ -6,7 +6,7 @@ import { server } from '../../lib/config'
 import { getAllPostsWithSlug, getPost } from "../../lib/api";
 export default function Post({ postData }) {
     const router = useRouter()
-
+    console.log(router.isFallback)
     const formatDate = date => {
         const newDate = new Date(date)
 
@@ -18,7 +18,7 @@ export default function Post({ postData }) {
     return (
         <div className="container m-auto mt-20 p-4">
             <Head>
-                <title>{postData.title}</title>
+                <title>{postData?.title}</title>
                 <link rel='icon' href='/favicon.ico' />
             </Head>
 
