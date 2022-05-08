@@ -2,18 +2,23 @@ import { useRouter } from "next/router";
 import Head from "next/dist/shared/lib/head";
 import Link from "next/dist/client/link";
 import { server } from '../../lib/config'
+import { format, parse } from 'fecha'
 
 import { getAllPostsWithSlug, getPost } from "../../lib/api";
 export default function Post({ postData }) {
     const router = useRouter()
-    console.log(router.isFallback)
-    const formatDate = date => {
-        const newDate = new Date(date)
 
-        return `${newDate.getDate()}/${
-            newDate.getMonth() + 1
-        }/${newDate.getFullYear()}`
-        }
+    // const formatDate = date => {
+    //     const newDate = new Date(date)
+
+    //     return `${newDate.getDate()}/${
+    //         newDate.getMonth() + 1
+    //     }/${newDate.getFullYear()}`
+    //     }
+
+    const formatDate = date => {
+        return format(parse(date, 'isoDateTime'), 'longDate')
+    }    
     
     return (
         <div className="container m-auto mt-20 p-4">
@@ -22,22 +27,22 @@ export default function Post({ postData }) {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
 
-            <main className="main text-red-700">
+            <main className="main text-white">
                 {router.isFallback ? (
                     <h2>Loading...</h2>
                 ): (
                     <article className="article">
                         <div className="postmeta">
-                            <h1 className="title">{postData.title}</h1>
-                            <p>{formatDate(postData.date)}</p>
+                            <h1 className=" text-4xl mb-2">{postData.title}</h1>
+                            <p className=" mb-10 italic">{formatDate(postData.date)}</p>
                         </div>
-                        <div className="postcontent"
+                        <div className="postcontent mb-10"
                             dangerouslySetInnerHTML={{__html: postData.content }} />
                     </article>
                 )}
                 <p>
                     <Link href='/blogs'>
-                        <a>back to articles</a>
+                        <a className=" font-bold text-red-600">Back to articles</a>
                     </Link>
                 </p>
             </main>
