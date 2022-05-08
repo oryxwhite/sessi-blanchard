@@ -17,7 +17,7 @@ export default function Hero() {
             
         </motion.div>
 
-        <div href='#' className='text-white text-left mt-28 text-sm xs:text-lg w-10/12 mb-60 '>
+        <div href='#' className='text-white text-left mt-28 text-sm xs:text-lg max-w-[720px] w-10/12 mb-60 '>
           Based in New York City, Sessi organizes to replace drug prohibition and the War on Drugs with both a socialist political economy of psychoactive substances and a system of guaranteed care that are coordinated by users and self-managed by workers.  Additionally, she reports on drugs—namely their political, economic,  and health considerations—and  writes about transgender life and culture.
           <br/> <br/>As an organizer, Sessi co-founded and currently serves as the lead organizer of the Socialist Drug Politics Organizing Committee (SDPOC), an affiliate of the NYC Democratic Socialists of America. Additionally, she co-founded and formerly served as the lead organizer of Do It Safe, Heaux! (DISH!), a discontinued harm reduction collective by and for trans women who use crystal methamphetamine. 
           <br/> <br/>As a journalist, she has published with <i>The Intercept, VICE, The Appeal,</i> and <i>ACLU Magazine</i>, among others. From 2018 to 2021, she was the staff writer at <i>FILTER</i>, one of the only online magazines dedicated to covering harm reduction. She also had a <i>VICE</i> sex column,<i> MTF & DTF</i>.  Sessi and her journalism has attracted the media attention of CBC, The Brian Lehrer Show, and even the far-right radio host Ben Shapiro.

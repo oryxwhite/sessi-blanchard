@@ -8,9 +8,9 @@ export default function Navbar() {
     return (
     <nav className="relative container mx-auto p-6">
         <div  className="flex items-center justify-between text-white">
-            <motion.h1 initial={{  opacity: 0}} animate={{  opacity: 1}} transition={{duration: .4}} className="text-md sm:text-lg tracking-widest">SESSI KUWABARA BLANCHARD</motion.h1>
+            <Link href='/'><motion.h1 initial={{  opacity: 0}} animate={{  opacity: 1}} transition={{duration: .4}} className="text-md sm:text-lg tracking-widest cursor-pointer">SESSI KUWABARA BLANCHARD</motion.h1></Link>
             <motion.div initial={{ x: 100, opacity: 0}} animate={{ x: 0, opacity: 1}} transition={{delay: .4, duration: .4}} className="hidden md:flex space-x-6">
-                <Link href="/" className="hover:text-red-900 transition-all">ABOUT</Link>
+                <Link href="/blogs" className="hover:text-red-900 transition-all">BLOG</Link>
                 <div href="" className="hover:text-red-900 transition-all">WRITING</div>
                 <div href="" className="hover:text-red-900 transition-all">SPEAKING</div>
                 <div href="" className="hover:text-red-900 transition-all">STORE</div>
@@ -29,7 +29,7 @@ export default function Navbar() {
             <motion.div initial={{opacity: 0}} animate={menuHidden ? {opacity: 0} : {opacity: 1}} transition={{duration: .4}} className={`absolute flex flex-col justify-center justify-self-center items-center
             pt-4 mt-10 space-y-6  bg-[#0d0100] font-medium text-white sm:w-auto sm:self-center left-6 right-6 border-2 pb-10`}>
                 <div className=""></div>
-                <div href="/" className="hover:text-red-900 transition-all">ABOUT</div>
+                <Link href="/blogs" className="hover:text-red-900 transition-all">BLOG</Link>
                 <div href="" className="hover:text-red-900 transition-all">WRITING</div>
                 <div href="" className="hover:text-red-900 transition-all">SPEAKING</div>
                 <div href="" className="hover:text-red-900 transition-all">STORE</div>
