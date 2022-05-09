@@ -21,7 +21,7 @@ export default function Post({ postData }) {
     }    
     
     return (
-        <div className="container m-auto mt-20 p-4">
+        <div className="container m-auto max-w-[800px]  mt-20 p-4">
             <Head>
                 <title>{postData?.title}</title>
                 <link rel='icon' href='/favicon.ico' />

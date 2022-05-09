@@ -13,10 +13,10 @@ export default function Blog({ allPosts: { edges } }) {
       <link rel='icon' href='/favicon.ico' />
     </Head>
 
-    <main className='main flex flex-column justify-center items-center text-white mt-10 mx-4 '>
+    <main className='text-white container m-auto mt-20 p-4'>
       {/* <h1 className='title'>Latest blog articles</h1>
       <hr /> */}
-      <section>
+      <section className=''>
         {edges.map(({ node }) => (
           <div className='listitem' key={node.id}>
             <div className='listitemthumbnail'>
@@ -27,9 +27,9 @@ export default function Blog({ allPosts: { edges } }) {
                 /> */}
               </figure>
             </div>
-            <div className='mb-12 font-sans'>
-              <h2 className='font-serif justify-self-center text-3xl font-bold  ml- mb-6'>{node.title}</h2>
-              <article className='mb-4' dangerouslySetInnerHTML={{__html: node.excerpt} } />
+            <div className='m-auto mb-12 w-11/12 max-w-[600px]'>
+              <h2 className='font-serif text-3xl font-bold mb-6'>{node.title}</h2>
+              <article className='mb-4 ' dangerouslySetInnerHTML={{__html: node.excerpt} } />
               <div className='italic '>{format(parse(node.date, 'isoDateTime'), 'longDate')}</div>
               <Link  href={`${server}/blogs/${node.slug}`}>
                 <a className='text-red-800 font-bold'>Read more </a>
