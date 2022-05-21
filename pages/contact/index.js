@@ -21,53 +21,53 @@ export default function Contact() {
         <link rel='icon' href='/favicon.ico' />
     </Head>
     <main className="flex flex-col justify-center items-center">
-    {/* <h1 className="text-white text-4xl  ml-28  mt-20">Contact</h1> */}
-    <form className="w-11/12 xs:w-10/12 sm:max-w-[400px] md:max-w-[600px] m-auto mt-40" method="post" onSubmit={handleOnSubmit}>
+    <h1 className="text-white text-3xl underline-offset-4 m-auto font-sans capitalize tracking-wider mt-20">Send me a message!</h1>
+    <form className="w-11/12 xs:w-10/12 sm:max-w-[400px] m-auto mt-20" method="post" onSubmit={handleOnSubmit}>
 
-      <div className="md:flex md:items-center mb-6">
-        <div className="md:w-1/3">
-          <label className="block text-gray-500 font-sans font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="name">
+      <div className="mb-6 m-auto">
+        <div className="">
+          <label className="block text-gray-500 font-sans font-bold mb-1 pr-4" htmlFor="name">
             Name
           </label>
         </div>
-        <div className="md:w-2/3">
+        <div className="">
           <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="name" type="text" >
           </input>
         </div>
       </div>
-      <div className="md:flex md:items-center mb-6">
-        <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="email">
+      <div className="m-auto mb-6">
+        <div className="">
+          <label className="block text-gray-500 font-bold mb-1  pr-4" htmlFor="email">
             Email
           </label>
         </div>
-        <div className="md:w-2/3">
+        <div className="">
           <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="email" type="email" placeholder="">
           </input>
         </div>
       </div>
 
-      <div className="md:flex md:items-start mb-6">
-        <div className="md:w-1/3">
-          <label className="block  text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="message">
+      <div className="m-auto mb-6">
+        <div className="">
+          <label className="block  text-gray-500 font-bold mb-1  pr-4" htmlFor="message">
             Message
           </label>
         </div>
-        <div className="md:w-2/3">
+        <div className="">
           <textarea className="bg-gray-200 h-40 w-70 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="message"/>
           
         </div>
       </div>
 
-      <div className="md:flex md:items-center">
-        <div className="md:w-1/3"></div>
-        <div className="md:w-2/3">
+      <div className="">
+        <div className=""></div>
+        <div className="">
           <button className="shadow bg-purple-900 hover:bg-purple-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
             Send
           </button>
-        </div>
+        </div> 
       </div>
-    </form>
+    </form> 
 
     </main>
     </div>

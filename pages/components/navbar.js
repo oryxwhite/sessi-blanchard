@@ -14,7 +14,7 @@ export default function Navbar() {
                 <div href="" className="hover:text-red-900 transition-all">WRITING</div>
                 <div href="" className="hover:text-red-900 transition-all">SPEAKING</div>
                 <div href="" className="hover:text-red-900 transition-all">STORE</div>
-                <div href="" className="hover:text-red-900 transition-all">CONTACT</div>
+                <Link href="/contact" className="hover:text-red-900 transition-all">CONTACT</Link>
             </motion.div>
 
             <button  onClick={() => setMenuHidden(!menuHidden)} className={`block hamburger md:hidden focus:outline-none ${menuHidden ? '' : 'open'} `}>
@@ -33,7 +33,7 @@ export default function Navbar() {
                 <div href="" className="hover:text-red-900 transition-all">WRITING</div>
                 <div href="" className="hover:text-red-900 transition-all">SPEAKING</div>
                 <div href="" className="hover:text-red-900 transition-all">STORE</div>
-                <div href="" className="hover:text-red-900 transition-all">CONTACT</div>
+                <Link href="/contact" className="hover:text-red-900 transition-all">CONTACT</Link>
             </motion.div>
         </div>
 
