@@ -21,8 +21,10 @@ export default function Contact() {
         <link rel='icon' href='/favicon.ico' />
     </Head>
     <main className="flex flex-col justify-center items-center">
+    
     <h1 className="text-white text-3xl underline-offset-4 m-auto font-sans capitalize tracking-wider mt-20">Send me a message!</h1>
-    <form className="w-11/12 xs:w-10/12 sm:max-w-[400px] m-auto mt-20" method="post" onSubmit={handleOnSubmit}>
+    <div className="w-11/12 max-w-[500px] h-100 p-2 rounded-xl border-2 mt-20 py-10">
+    <form className="w-11/12 xs:w-10/12 sm:max-w-[400px] m-auto " method="post" onSubmit={handleOnSubmit}>
 
       <div className="mb-6 m-auto">
         <div className="">
@@ -61,14 +63,14 @@ export default function Contact() {
 
       <div className="">
         <div className=""></div>
-        <div className="">
+        <div className="flex items-center justify-center">
           <button className="shadow bg-purple-900 hover:bg-purple-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
             Send
           </button>
         </div> 
       </div>
     </form> 
-
+    </div>
     </main>
     </div>
   )
