@@ -26,7 +26,7 @@ export default function Navbar() {
         </div>
 
         <div className="md:hidden">
-            <motion.div initial={{opacity: 0}} animate={menuHidden ? {opacity: 0} : {opacity: 1}} transition={{duration: .4}} className={`absolute flex flex-col justify-center justify-self-center items-center pt-4 mt-10 space-y-6  bg-[#0d0100] font-medium text-white sm:w-auto sm:self-center left-6 right-6 border-2 pb-10`}>
+            <motion.div initial={{opacity: 0}} animate={menuHidden ? {opacity: 0} : {opacity: 1}} transition={{duration: .2}} className={`absolute flex flex-col justify-center justify-self-center items-center pt-4 mt-10 space-y-6  bg-[#0d0100] font-medium text-white sm:w-auto sm:self-center left-6 right-6 border-2 pb-10`}>
                 <div className=""></div>
                 <Link href="/blogs"><a onClick={() => setMenuHidden(!menuHidden)} className="hover:text-red-900 transition-all">BLOG</a></Link>
                 <div href="" className="hover:text-red-900 transition-all">WRITING</div>
