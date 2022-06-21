@@ -13,7 +13,7 @@ export default function Contact() {
       formData[field.id] = field.value
     })
 
-    fetch('/api/mail', {
+    await fetch('/api/mail', {
       method: 'post',
       body: JSON.stringify(formData)
     })
