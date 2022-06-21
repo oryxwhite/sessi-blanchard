@@ -10,14 +10,14 @@ export default function ItemDetail() {
   )
 }
 
-export async function getStaticPaths() {
-    const itemPaths = [
-        { params: { id: 'boof' } },
-        { params: { id: 'dude' } },
-        { params: { id: 'overampd' } }
-    ]
-    return {
-        paths: itemPaths,
-        fallback: false
-    }
-}
+// export async function getStaticPaths() {
+//     const itemPaths = [
+//         { params: { id: 'boof' } },
+//         { params: { id: 'dude' } },
+//         { params: { id: 'overampd' } }
+//     ]
+//     return {
+//         paths: itemPaths,
+//         fallback: false
+//     }
+// }
