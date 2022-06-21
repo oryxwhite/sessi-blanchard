@@ -3,13 +3,12 @@ import sendgrid from "@sendgrid/mail";
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function sendEmail(req, res) {
+  const body = JSON.parse(req.body);
   try {
-    await JSON.parse(req.body)
-    console.log(req.body)
     await sendgrid.send({
       to: "mtxymtxy@gmail.com", // Your email where you'll receive emails
       from: "msalvuccidev@gmail.com", // your website email address here
-      subject: `Sent from website: ${req.body.subject}`,
+      subject: `Sent from website: ${body.subject}`,
       html: `
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
         <html lang="en">
@@ -24,10 +23,10 @@ export default async function sendEmail(req, res) {
         </head>
           <body>
             <div class="container" style="margin-left: 20px;margin-right: 20px;">
-            <h3>You've got a new mail from ${req.body.fullname}, their email is: ✉️${req.body.email} </h3>
+            <h3>You've got a new mail from ${body.name}, their email is: ✉️${body.email} </h3>
             <div style="font-size: 16px;">
               <p>Message:</p>
-              <p>${req.body.message}</p>
+              <p>${body.message}</p>
               <br>
             </div>
             </div>
