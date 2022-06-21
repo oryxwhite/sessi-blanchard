@@ -13,7 +13,7 @@ export default function Contact() {
       formData[field.id] = field.value
     })
 
-    await fetch('/api/mail', {
+    await fetch('/api/sendgrid', {
       method: 'post',
       body: JSON.stringify(formData)
     })
