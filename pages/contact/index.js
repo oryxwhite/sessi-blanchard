@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { useState } from "react";
 import { motion } from "framer-motion";
+
+
 export default function Contact() {
   const [submit, setSubmit] = useState(false);
   async function handleOnSubmit(e) {
@@ -17,7 +19,10 @@ export default function Contact() {
     })
 
     setSubmit(true)
+    console.log('post request sent from contact form')
   }
+
+
 
   return (
     <div>

@@ -6,9 +6,9 @@ export default function Shop() {
       <h1 className="text-white text-[40px] mt-5">Zines</h1>
       <div className="bg-white w-48 h-1 mt-2"> </div>
       <div className="grid grid-flow-cols md:grid-flow-row mt-10 justify-center items-center ">
-        <Item img='/boofitthumb.jpg' title='Boof It! (PDF)' price="$5.00" />
-        <Item img="/narcan.png" title="Dude, Where's My Narcan? (PDF)" price="$5.00" />
-        <Item img='/overampdthumb.png' title="Overamp'd! (PDF)" price="$5.00" />
+        <Item img='/boofitthumb.jpg' id='boof' title='Boof It! (PDF)' price="$5.00" />
+        <Item img="/narcan.png" id='dude' title="Dude, Where's My Narcan? (PDF)" price="$5.00" />
+        <Item img='/overampdthumb.png' id='overampd' title="Overamp'd! (PDF)" price="$5.00" />
       </div>
     </div>
   )

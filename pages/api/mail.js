@@ -20,4 +20,5 @@ export default (req, res) => {
     mail.send(data)
 
     res.status(200).json({ status: 'OK' })
+    console.log('email sent')
 }
