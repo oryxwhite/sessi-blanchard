@@ -13,7 +13,7 @@ export default function Hero() {
             HARM REDUCTIONIST
             <motion.div className='bg-white w-8/12 h-[1px] align my-4'></motion.div>
             JOURNALIST
-            <motion.div className='bg-white w-8/12 h-[1px] align my-4'></motion.div> 
+            {/* <motion.div className='bg-white w-8/12 h-[1px] align my-4'></motion.div>  */}
             
         </motion.div>
 

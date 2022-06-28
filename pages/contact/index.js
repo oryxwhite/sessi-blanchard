@@ -5,21 +5,35 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   const [submit, setSubmit] = useState(false);
+  const [buttonText, setButtonText] = useState("Send");
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
+
+
   async function handleOnSubmit(e) {
     e.preventDefault()
     const formData = {}
-    Array.from(e.currentTarget.elements).forEach(field => {
+     Array.from(e.currentTarget.elements).forEach(field => {
       if ( !field.id ) return;
       formData[field.id] = field.value
     })
-
-    await fetch('/api/sendgrid', {
+    setButtonText('Sending')
+    const res = await fetch('/api/sendgrid', {
       method: 'post',
       body: JSON.stringify(formData)
     })
-
-    setSubmit(true)
-    console.log('post request sent from contact form')
+    
+    const { error } = await res.json()
+    if (error) {
+      setShowSuccessMessage(false)
+      setShowFailureMessage(true)
+      return
+    }
+    setShowSuccessMessage(true)
+    setShowFailureMessage(false)
+    setButtonText('Sent!')
+    
+    console.log(res)
   }
 
 
@@ -74,8 +88,8 @@ export default function Contact() {
       <div className="">
         <div className=""></div>
         <div className="flex items-center justify-center">
-          <button className="shadow bg-purple-900 hover:bg-purple-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
-            Send
+          <button disabled={buttonText==="Sent!"?true:false} className={`shadow hover:bg-purple-700 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded ${buttonText == "Sent!"?'bg-red-500':'bg-purple-900'}`} type="submit">
+            {buttonText}
           </button>
         </div> 
       </div>
