@@ -13,9 +13,29 @@ module.exports = {
       xl: '1440px'
     },
     extend: {
+      gridTemplateColumns: {
+        'auto-fit': 'repeat(auto-fit, minmax(0, 1fr))',
+        'auto-fill': 'repeat(auto-fill, minmax(200px, 1fr))',
+      },
+      gridTemplateRows: {
+        'auto-fit': 'repeat(auto-fit, minmax(0, 1fr))',
+        'auto-fill': 'repeat(auto-fill, minmax(0, 1fr))',
+      },
     },
   },
-  // plugins: [require('flowbite/plugin')]
+
+  plugins: [require("daisyui")],
+
+  daisyui: {
+    themes: [
+      {
+        dracula: {
+          ...require("daisyui/src/colors/themes")["[data-theme=luxury]"],
+          "base-100": "#0d0100"
+        }
+      }
+    ]
+  }
   
   // purge: [
   //   "./pages/**/*.tsx",
