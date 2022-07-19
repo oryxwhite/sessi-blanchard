@@ -6,7 +6,7 @@ import postData from '../filterPostData.json'
 import PostCard from './Card';
 
 const postComponents = postData.Posts.map((data, index) => {
-    return <PostCard imgsrc={data.imageSource} title={data.postTitle} key={index} url={data.url}/>
+    return <PostCard imgsrc={data.imageSource} title={data.postTitle} key={index} url={data.url} lede={data.lede}/>
 })
 
 const Carousel = () => {
@@ -135,7 +135,7 @@ const Carousel = () => {
               </div>
             );
           })} */}
-          
+
           {postComponents}
 
         </div>

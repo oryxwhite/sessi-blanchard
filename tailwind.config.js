@@ -29,10 +29,11 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        dracula: {
+        luxury: {
           ...require("daisyui/src/colors/themes")["[data-theme=luxury]"],
           "base-100": "#0d0100"
-        }
+        },
+        dracula: {...require("daisyui/src/colors/themes")["data-theme=dracula"]}
       }
     ]
   }

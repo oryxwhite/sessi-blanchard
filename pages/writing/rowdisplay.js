@@ -8,7 +8,7 @@ export default function Writing() {
     })
 
     return(
-        <div className="w-9/12 m-auto mt-20">
+        <div className="w-9/12 m-auto mt-40">
 
             {/* <div className="grid grid-flow-col gap-4 mt-20 justify-items-center max-w-9/12">
                 {postComponents}

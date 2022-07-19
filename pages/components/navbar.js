@@ -13,7 +13,7 @@ export default function Navbar() {
                 <Link href="/blogs"><a className="hover:text-red-900 transition-all">BLOG</a></Link>
                 <div href="" className="hover:text-red-900 transition-all">WRITING</div>
                 <div href="" className="hover:text-red-900 transition-all">SPEAKING</div>
-                <div href="" className="hover:text-red-900 transition-all">STORE</div>
+                <Link href="/shop"><a className="hover:text-red-900 transition-all">STORE</a></Link>
                 <Link href="/contact"><a className="hover:text-red-900 transition-all">CONTACT</a></Link>
             </motion.div>
 
@@ -31,7 +31,7 @@ export default function Navbar() {
                 <Link href="/blogs"><a onClick={() => setMenuHidden(!menuHidden)} className="hover:text-red-900 transition-all">BLOG</a></Link>
                 <div href="" className="hover:text-red-900 transition-all">WRITING</div>
                 <div href="" className="hover:text-red-900 transition-all">SPEAKING</div>
-                <div href="" className="hover:text-red-900 transition-all">STORE</div>
+                <Link href="/shop"><a onClick={() => setMenuHidden(!menuHidden)} className="hover:text-red-900 transition-all">SHOP</a></Link>
                 <Link href="/contact"><a onClick={() => setMenuHidden(!menuHidden)} className="hover:text-red-900 transition-all">CONTACT</a></Link>
             </motion.div>
         </div>
