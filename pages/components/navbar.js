@@ -11,8 +11,8 @@ export default function Navbar() {
             <Link href='/'><motion.h1 initial={{  opacity: 0}} animate={{  opacity: 1}} transition={{duration: .4}} className="text-md sm:text-lg tracking-widest cursor-pointer">SESSI KUWABARA BLANCHARD</motion.h1></Link>
             <motion.div initial={{ x: 100, opacity: 0}} animate={{ x: 0, opacity: 1}} transition={{delay: .4, duration: .4}} className="hidden md:flex space-x-6">
                 <Link href="/blogs"><a className="hover:text-red-900 transition-all">BLOG</a></Link>
-                <div href="" className="hover:text-red-900 transition-all">WRITING</div>
-                <div href="" className="hover:text-red-900 transition-all">SPEAKING</div>
+                <Link href="/writing"><a className="hover:text-red-900 transition-all">WRITING</a></Link>
+                <Link href="/speaking"><a className="hover:text-red-900 transition-all">SPEAKING</a></Link>
                 <Link href="/shop"><a className="hover:text-red-900 transition-all">STORE</a></Link>
                 <Link href="/contact"><a className="hover:text-red-900 transition-all">CONTACT</a></Link>
             </motion.div>

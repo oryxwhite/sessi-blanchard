@@ -1,20 +1,20 @@
 import postData from "./filterPostData.json"
 import PostCard from "./components/Card.js"
+import Carousel from "./components/Carousel"
 
 export default function Writing() {
-    // postData.Posts[0].postTitle\
     const postComponents = postData.Posts.map((data, index) => {
-        return <PostCard imgsrc={data.imageSource} title={data.postTitle} url={data.url} key={index} />
+        return <PostCard imgsrc={data.imageSource} title={data.postTitle} key={index} index={index} url={data.url}/>
     })
 
     return(
-        <div className="w-9/12 m-auto">
+        <div className="w-9/12 m-auto mt-40">
 
-            <div className="grid grid-cols-auto-fill gap-4 gap-x-0 mt-20 justify-items-center max-w-9/12">
-
+            {/* <div className="grid grid-flow-col gap-4 mt-20 justify-items-center max-w-9/12">
                 {postComponents}
+            </div> */}
 
-            </div>
+            <Carousel />
 
          </div>
     )
